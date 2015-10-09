@@ -21,3 +21,19 @@ char* charitize(int num)
 {
 
 }
+
+/*
+	This function takes an int and teturns the ith digit of it
+*/
+int digital(int num, int i)
+{
+
+}
+
+/*
+	This function takes an int and returns the ith digit as a char
+*/
+char charital(int num, int i)
+{
+
+}
