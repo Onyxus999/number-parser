@@ -5,6 +5,10 @@
  ***						***
  ***	Author: Onyxus999 (Jacob Rogers)	***/
 
+/*
+ *	This function takes an int and returns the number of digits
+ */
+extern int count_dig(int num);
 
 /*
  *	This function takes an int and returns a pointer to an array of its digits
