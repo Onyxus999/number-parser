@@ -37,7 +37,10 @@ int count_dig(int num)
  */
 int digital(int num, int i)
 {
-	return ((num % (int) pow(10, i+1)) / pow(10, i));
+	// This will make the indexing start from the left, 
+	// rather then the right
+	int index = count_dig(num) - i;
+	return ((num % (int) pow(10, index)) / pow(10, index-1));
 }
 
 /*
@@ -83,3 +86,4 @@ int* digitize(int num)
 	return lst_digits;
 
 }
+
