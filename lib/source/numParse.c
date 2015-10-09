@@ -49,7 +49,7 @@ int digital(int num, int i)
 char charital(int num, int i)
 {
 	char char_dig;
-	snprintf(&char_dig, sizeof(char_dig), "%d", digital(num, i));
+	sprintf(&char_dig, "%d", digital(num, i));
 	return char_dig;
 }
 
