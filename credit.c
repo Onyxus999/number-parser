@@ -35,15 +35,46 @@ int main(void)
 		product_index++;
 	}
 
-	int length_of_products = 0;
+	int* length_of_products = malloc(sizeof(int) * ((length_ccnum/2)));
+	int total_length_of_products = 0;
 	for (int i = 0; i < (length_ccnum/2); i++)
-	{
+	{ 
+		length_of_products[i] = 0;
 		for (int j = product_list[i]; j > 0; j =/ 10)
-			length_of_products++;
+		{
+			length_of_products[i]++;
+			total_length_of_products++;
+		}
 	}
 
-	
+	int* product_digits = malloc(sizeof(int) * total_length_of_products);
+	int digit_index = 0;
+	for (int i = 0; i < (length_ccnum/2); i++)
+	{
+		for (int j = 0; j < length_of_products[i]; j++)
+		{
+			product_digits[digit_index] = ( product_list[i] % (int) pow(10, i+1) ) / pow(10, i);
+			digit_index++;
+		}
 
+	}
+
+	int total_sum = 0;
+	for (int i = 0; i < total_length_of_products; i++)
+	{
+		total_sum += product_digits[i];
+	}
+
+	if ((total_sum % 10) == 0)
+	{
+		printf("VALID\n");
+	}
+	else
+	{
+		printf("INVALID\n");
+	}
+
+	free(product_digits);
 	free(product_list);
 	free(digitized_ccnum);
 	return 0;
