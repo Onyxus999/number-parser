@@ -35,8 +35,14 @@ int main(void)
 		product_index++;
 	}
 
-	// Create single for loop to get total number of digits
-	// of all the products in product_list
+	int length_of_products = 0;
+	for (int i = 0; i < (length_ccnum/2); i++)
+	{
+		for (int j = product_list[i]; j > 0; j =/ 10)
+			length_of_products++;
+	}
+
+	
 
 	free(product_list);
 	free(digitized_ccnum);
